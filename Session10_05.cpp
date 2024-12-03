@@ -16,17 +16,17 @@ int main() {
     int target;
     printf("Nhap vao so nguyen can tim: ");
     scanf("%d", &target);
-    int left = 0, right = n - 1;
+    int start = 0, end = n - 1;
     int found = -1; 
-    while (left <= right) {
-        int mid = (left + right) / 2;
+    while (start <= end) {
+        int mid = (start + end) / 2;
         if (arr[mid] == target) {
             found = mid;
             break;
         } else if (arr[mid] < target) {
-            left = mid + 1;
+            start = mid + 1;
         } else {
-            right = mid - 1;
+            end = mid - 1;
         }
     }
 
